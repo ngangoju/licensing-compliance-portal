@@ -48,3 +48,7 @@ surefire-reports/
 *.tsbuildinfo
 next-env.d.ts
 .springJavaHeuristic
+
+# Local Binaries and Sensitive Docs
+apache-maven-*/
+DESIGN.md
