@@ -1,0 +1,15 @@
+package rw.bnr.licensing.domain.enums;
+
+public enum UserRole {
+    APPLICANT,
+    CASE_MANAGER,
+    COMPLIANCE_OFFICER,
+    TECHNICAL_REVIEWER,
+    FIT_AND_PROPER_OFFICER,
+    LEGAL_OFFICER,
+    INSPECTION_OFFICER,
+    LICENSING_COMMITTEE,
+    GOVERNOR_DELEGATE,
+    ADMIN,
+    AUDITOR
+}

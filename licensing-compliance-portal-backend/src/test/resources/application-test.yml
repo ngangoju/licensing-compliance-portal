@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  flyway:
+    enabled: true
+    locations: classpath:db/test-migration
+    user: sa
+    password:
+
+storage:
+  base-path: target/test-storage
+
+jwt:
+  secret: Ym5yX2xpY2Vuc2luZ19jb21wbGlhbmNlX3BvcnRhbF92ZXJ5X3NlY3VyZV9rZXlfZm9yX2p3dA==
+  expiration: 900000
+  refresh-expiration: 604800000

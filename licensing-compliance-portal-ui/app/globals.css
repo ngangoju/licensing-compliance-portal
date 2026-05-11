@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand */
+  --bnr-brown:        #3D1C00;
+  --bnr-brown-700:    #5C2D00;
+  --bnr-brown-500:    #7A4A1E;
+  --bnr-brown-300:    #A0684A;
+  --bnr-gold:         #C8921A;
+  --bnr-gold-light:   #DBA832;
+  --bnr-cream:        #F5E6C0;
+  --bnr-cream-light:  #FAF3E0;
+  --bnr-cream-50:     #FDFAF3;
+
+  /* Text */
+  --bnr-text:         #1A0A00;
+  --bnr-text-muted:   #6B4226;
+  --bnr-text-on-dark: #F5E6C0;
+
+  /* Status colors */
+  --s-draft:        #9CA3AF;
+  --s-name:         #6366F1;
+  --s-submitted:    #3B82F6;
+  --s-compliance:   #F59E0B;
+  --s-review:       #D97706;
+  --s-legal:        #7C3AED;
+  --s-committee:    #BE185D;
+  --s-aip:          #0D9488;
+  --s-organization: #0369A1;
+  --s-inspection:   #0EA5E9;
+  --s-licensed:     #16A34A;
+  --s-rejected:     #DC2626;
+  --s-withdrawn:    #9CA3AF;
+  --s-expired:      #6B7280;
+
+  /* Radius — SHARP. No rounded-full anywhere except avatars and status pills */
+  --radius-sm:  2px;
+  --radius-md:  4px;
+  --radius-lg:  6px;
+  --radius-xl:  8px;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Sans 3', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Required aliases for previous uses / Tailwind compatibility */
+  --background: var(--bnr-cream-50);
+  --foreground: var(--bnr-text);
+  --card: #ffffff;
+  --card-foreground: var(--bnr-text);
+  --muted: var(--bnr-cream-light);
+  --muted-foreground: var(--bnr-text-muted);
+  --border: #E8DCC8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  color: var(--foreground);
+  background: transparent;
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+@layer components {
+  .surface-panel {
+    background: white;
+    color: var(--bnr-text);
+    border: 1px solid #E8DCC8;
+    border-radius: var(--radius-xl);
+    /* NO box-shadow by default */
+  }
+  
+  .elevated-card {
+    box-shadow: 0 1px 8px rgba(61,28,0,0.08);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background-color: var(--bnr-brown);
+    padding: 10px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--bnr-text-on-dark);
+    box-shadow: none;
+    transition: background-color 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--bnr-brown-700);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background-color: transparent;
+    border: 1px solid var(--bnr-brown-300);
+    padding: 10px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--bnr-text);
+    box-shadow: none;
+    transition: background-color 0.15s;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background-color: var(--bnr-cream);
+  }
+
+  .btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background-color: #DC2626;
+    padding: 10px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: white;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+  }
+  
+  .btn-danger:hover:not(:disabled) {
+    background-color: #B91C1C;
+  }
+  
+  .btn-danger:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .btn-ghost {
+    background-color: transparent;
+    border: none;
+    color: var(--bnr-gold);
+    padding: 10px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-ghost:hover:not(:disabled) {
+    text-decoration: underline;
+  }
+
+  .input-field {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid #D4C5A9;
+    background-color: white;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-family: var(--font-body);
+    color: var(--bnr-text);
+    box-shadow: none;
+    transition: border-color 0.15s, outline 0.15s;
+  }
+
+  .input-field::placeholder {
+    color: #A89070;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--bnr-gold);
+    outline: 2px solid rgba(200,146,26,0.2);
+  }
+}

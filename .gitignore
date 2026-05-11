@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+target/
+.next/
+out/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log*
+logs/
+
+# Database / Storage
+storage/
+h2db/
+
+# Local Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.*.local
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+test-output/
+surefire-reports/
+
+# Other
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.springJavaHeuristic

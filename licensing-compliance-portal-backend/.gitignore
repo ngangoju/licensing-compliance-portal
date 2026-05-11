@@ -1,0 +1,39 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Logs
+backend.log*
+*.log*
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Storage (local file uploads)
+storage/
+h2db/
+
+# Environment
+*.env.local
+*.env.*.local
+
+# Spring Boot
+.springJavaHeuristic
+
+# Test output
+test-output/
+surefire-reports/

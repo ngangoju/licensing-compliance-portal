@@ -1,0 +1,21 @@
+CREATE TABLE bnr.fit_and_proper_assessments (
+    id UUID PRIMARY KEY,
+    application_id UUID NOT NULL,
+    assessed_by UUID NOT NULL,
+    individual_name VARCHAR(255) NOT NULL,
+    individual_role VARCHAR(100) NOT NULL,
+    shareholding_pct DECIMAL(5, 2),
+    national_id VARCHAR(100),
+    nationality VARCHAR(100),
+    criminal_record_clear BOOLEAN,
+    financial_history_clear BOOLEAN,
+    qualifications_adequate BOOLEAN,
+    no_conflict_of_interest BOOLEAN,
+    interview_conducted BOOLEAN NOT NULL DEFAULT FALSE,
+    interview_date DATE,
+    interview_notes CLOB,
+    outcome VARCHAR(20),
+    outcome_notes CLOB,
+    assessed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
