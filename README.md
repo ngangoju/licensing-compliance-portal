@@ -306,7 +306,7 @@ See [`DESIGN.md`](./DESIGN.md) for:
 
 ## What Was Deliberately Left Out
 
-See DESIGN.md §19 for the full documented out-of-scope list, including:
+The full documented out-of-scope list, including:
 
 - Email/SMS notifications
 - Multi-factor authentication
